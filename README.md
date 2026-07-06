@@ -6,10 +6,12 @@ I care as much about *whether it actually worked* — measured against a baselin
 
 ### Things I've built
 
-- **[ai-rag-evaluation-platform](https://github.com/Hasnain91169/ai-rag-evaluation-platform)** — because "the RAG feels better now" isn't good enough. Eval harness for retrieval quality: grounding checks, regression testing, measured before/after.
-- **DevLoop** — an agentic senior/junior developer loop: Claude API as the reasoning layer, a locally-served Qwen2.5-Coder (MLX) as the executor, with planning, critique and retry. Built partly because Ollama broke on the M5 Tahoe beta, so I moved the whole local stack to MLX.
-- **Agentic ops tooling** — [Exception-Resolution-Engine](https://github.com/Hasnain91169/Exception-Resolution-Engine-demo), [Ops-Inbox-Intelligence](https://github.com/Hasnain91169/Ops-Inbox-Intelligence-demo), [ops-load-diagnostic](https://github.com/Hasnain91169/ops-load-diagnostic) — dropping LLM reasoning into ops/finance/logistics workflows and finding the agentic opportunity in things people don't think of as a process.
-- **Real-time voice agents** — [Caller](https://github.com/Hasnain91169/Caller) / [voicebot](https://github.com/Hasnain91169/voicebot). Fully local STT → LLM → TTS (Whisper · Piper), full-duplex echo control, sub-1.5s response latency.
+- **[ai-rag-evaluation-platform](https://github.com/Hasnain91169/ai-rag-evaluation-platform)** — because "the RAG feels better now" isn't good enough. An eval + observability harness for RAG: retrieval hit-rate, faithfulness, hallucination rate, and a failure-diagnosis matrix that separates retrieval vs prompting vs ranking failures.
+- **[LangStuff](https://github.com/Hasnain91169/LangStuff)** — a LangGraph multi-agent incident-resolution engine: a durable state machine, tool-calling with human-in-the-loop approval gates, policy guardrails, and a full audit trail. Runs deterministically offline; drops in a real LLM when configured.
+- **[DevLoop](https://github.com/Hasnain91169/DevLoop)** — an agentic senior/junior developer loop: Claude API reasons and reviews, a local model executes, with planning, critique and retry. The local executor is provider-agnostic (MLX default, Ollama supported) — I moved my own stack to MLX when Ollama broke on the M5 Tahoe beta.
+- **[ATLAS](https://github.com/Hasnain91169/ATLAS)** — a personal "operating company" assistant I built for myself: department-head agents produce reports, an orchestrator synthesises them, and it proposes actions I approve. CLI-first, SQLite-backed, with a proper test suite.
+- **[CounterWatch](https://github.com/Hasnain91169/CounterWatch)** — a counter-pick engine for a game I actually play. A small rules-and-overrides matchup engine — because the weekend project is usually the tool nobody had built yet.
+- **Real-time voice agents** — fully local STT → LLM → TTS (Whisper · Piper), full-duplex echo control, sub-1.5s response latency.
 - **SME builds** — websites and automation shipped fast for real clients (barbers, mosques, clinics).
 
 ### What I do
